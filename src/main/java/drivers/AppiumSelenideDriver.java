@@ -24,11 +24,12 @@ public class AppiumSelenideDriver implements WebDriverProvider {
         options.setDeviceName(System.getProperty("deviceName","otus"));
         options.setPlatformVersion(System.getProperty("platformVersion","5.1"));
 
+
         options.setAppPackage("com.pyankoff.andy");
         options.setAppActivity("MainActivity");
 
         try {
-            AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), options);
+            AndroidDriver driver = new AndroidDriver(new URL("http://"+System.getProperty("addressServer")+"/wd/hub"), options);
             driver.configuratorSetWaitForSelectorTimeout(Duration.ofSeconds(10));
             return driver;
         } catch (MalformedURLException e) {

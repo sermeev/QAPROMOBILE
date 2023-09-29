@@ -17,11 +17,10 @@ public class ChatPage extends ABasePage<ChatPage> {
     private SelenideElement sendButton = $("[content-desc='send']");
 
     private  String text = "";
-    public UpgradeToProPage clickUnlockPremium(){
+    public void clickUnlockPremium(){
         unblockPremiumButton.shouldBe(Condition.enabled);
         unblockPremiumButton.click();
         openUpgradeToProPage.shouldBe(Condition.visible);
-        return new UpgradeToProPage();
     }
     public ChatPage checkHelloMessage(){
         messageHello.shouldBe(Condition.visible);

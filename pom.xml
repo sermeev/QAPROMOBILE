@@ -50,6 +50,7 @@
                         <platformName>Android</platformName>
                         <deviceName>otus</deviceName>
                         <platformVersion>5.1</platformVersion>
+                        <addressServer>127.0.0.1:4723</addressServer>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
