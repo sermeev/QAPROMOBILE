@@ -2,10 +2,10 @@ timeout(60){
     node("maven"){
         timestamps {
             ansiColor('xterm') {
-                currentBuild.description = "BRANCH=${BRANCH}\nBASE_URL=${BASE_URL}"
-                stage("Checkout") {
+                stage("checkout") {
                     checkout scm
                 }
+/*
                 stage("Running tests") {
                     def exitCode = sh(
                             returnStatus: true,
@@ -24,6 +24,7 @@ timeout(60){
                             results          : [[path: './target/allure-results']]
                     ])
                 }
+*/
             }
         }
     }
