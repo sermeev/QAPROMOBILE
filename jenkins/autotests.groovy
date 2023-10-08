@@ -9,7 +9,7 @@ timeout(60){
                 stage("Running tests") {
                     def exitCode = sh(
                             returnStatus: true,
-                            script: " mvn test -DBase.url=${BASE_URL}"
+                            script: " mvn test -DplatformName=${PLATFORM_NAME} -DdeviceName=${DEVICE_NAME} -DplatformVersion=${PLATFORM_VERSION} -DaddressServer=${ADDRESS_SERVER}"
                     )
                     if (exitCode == 1) {
                         currentBuild.result = 'UNSTABLE'
