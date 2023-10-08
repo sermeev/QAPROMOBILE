@@ -5,7 +5,7 @@ timeout(60){
                 stage("checkout") {
                     checkout scm
                 }
-/*
+
                 stage("Running tests") {
                     def exitCode = sh(
                             returnStatus: true,
@@ -15,7 +15,7 @@ timeout(60){
                         currentBuild.result = 'UNSTABLE'
                     }
                 }
-                stage("Allure report") {
+                /*stage("Allure report") {
                     allure([
                             invludeProperties: false,
                             jdk              : '',
@@ -23,8 +23,8 @@ timeout(60){
                             reportBuildPolicy: 'ALWAYS',
                             results          : [[path: './target/allure-results']]
                     ])
-                }
-*/
+                }*/
+
             }
         }
     }
