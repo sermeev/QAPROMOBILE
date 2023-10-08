@@ -21,7 +21,7 @@ timeout(60){
                             jdk              : '',
                             properties       : [],
                             reportBuildPolicy: 'ALWAYS',
-                            results          : [[path: './mobile-autotests/target/allure_results']]
+                            results          : [[path: './target/allure-results']]
                     ])
                 }
 
