@@ -21,7 +21,7 @@ timeout(60){
                             jdk              : '',
                             properties       : [],
                             reportBuildPolicy: 'ALWAYS',
-                            results          : [[path: './target/allure-results']]
+                            results          : [[path: 'allure-results']]
                     ])
                 }
 
