@@ -12,10 +12,6 @@ import pages.StartPage;
 public class ChatPage_Test {
 
     @Test
-    public void test(){
-
-    }
-    @Test
     @DisplayName("При входе в чате отображается сообщение с приветствием")
     public void checkHelloTest(){
         new StartPage()
