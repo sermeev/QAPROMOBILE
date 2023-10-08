@@ -1,7 +1,7 @@
 timeout(60){
     node("maven"){
         timestamps {
-            ansiColor('xterm') {
+
                 stage("checkout") {
                     checkout scm
                 }
@@ -25,7 +25,7 @@ timeout(60){
                     ])
                 }*/
 
-            }
+
         }
     }
 }
