@@ -1,4 +1,5 @@
 import extensions.AppiumExtension;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -6,10 +7,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import pages.StartPage;
 
+@Epic("ChatPage")
 @ExtendWith(AppiumExtension.class)
 public class ChatPage_Test {
 
+    @Test
+    public void test(){
 
+    }
     @Test
     @DisplayName("При входе в чате отображается сообщение с приветствием")
     public void checkHelloTest(){
@@ -21,7 +26,7 @@ public class ChatPage_Test {
                 .checkHelloMessage();
     }
     @Test
-    @DisplayName("При нажатии нв вкладке 'Chat'  кнопки 'Upgrade To Pro', открывается соответствующая страница ")
+    @DisplayName("При нажатии нa вкладке 'Chat'  кнопки 'Upgrade To Pro', открывается соответствующая страница ")
     public void openUpgradeToProPageTest(){
         new StartPage()
                 .open()
