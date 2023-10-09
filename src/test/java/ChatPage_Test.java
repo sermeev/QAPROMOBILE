@@ -30,6 +30,7 @@ public class ChatPage_Test {
                 .clickOkButton()
                 .openingChatPage()
                 .clickUnlockPremium();
+        System.out.println(System.getProperty("allure.results.directory"));
     }
 
     @Test
